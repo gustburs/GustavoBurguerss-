@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gustavo Burguers | Hamburguesas y más</title>
+
+    <style>
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #fffaf3;
+            color: #333;
+        }
+
+        header {
+            background: #d92323;
+            color: white;
+            text-align: center;
+            padding: 28px 15px;
+        }
+
+        header h1 { margin: 0; font-size: 34px; }
+
+        nav {
+            background: #222;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 12px;
+            font-weight: bold;
+        }
+
+        .bienvenida {
+            text-align: center;
+            padding: 40px 15px;
+            background: #ffe3bd;
+        }
+
+        .bienvenida h2 {
+            color: #c51f1f;
+            font-size: 28px;
+        }
+
+        .contenedor {
+            max-width: 1100px;
+            margin: auto;
+            padding: 30px 15px;
+        }
+
+        .productos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        .producto {
+            background: white;
+            width: 300px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px #00000020;
+            text-align: center;
+            padding-bottom: 22px;
+        }
+
+        .producto img {
+            width: 100%;
+            height: 210px;
+            object-fit: cover;
+        }
+
+        .producto h3 { color: #c92323; }
+
+        .producto p { padding: 0 12px; }
+
+        .precio {
+            font-size: 23px;
+            font-weight: bold;
+            color: #218838;
+        }
+
+        .boton {
+            display: inline-block;
+            background: #e32626;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 7px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .boton:hover { background: #a81717; }
+
+        .contacto {
+            text-align: center;
+            background: #ffe3bd;
+            padding: 35px 15px;
+        }
+
+        .contacto a {
+            color: #16803c;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 18px;
+        }
+
+        @media (max-width: 600px) {
+            nav a {
+                display: inline-block;
+                margin: 8px;
+            }
+
+            .producto {
+                width: 100%;
+                max-width: 350px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>🍔 Gustavo Burguers</h1>
+        <p>¡El sabor que conquista tu apetito!</p>
+    </header>
+
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#menu">Menú</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <section class="bienvenida" id="inicio">
+        <h2>¡Bienvenido a Gustavo Burguers!</h2>
+        <p>Hamburguesas deliciosas y comida preparada para disfrutar.</p>
+        <p>¡Elige tu favorito y haz tu pedido!</p>
+        <a class="boton" href="#menu">Ver menú</a>
+    </section>
+
+    <main class="contenedor" id="menu">
+        <h2 style="text-align:center;">🍟 Nuestro menú</h2>
+
+        <div class="productos">
+            <div class="producto">
+                <img
+                    src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=700"
+                    alt="Hamburguesa con queso">
+                <h3>Hamburguesa Especial</h3>
+                <p>Carne, queso, lechuga, tomate y aderezos.</p>
+                <p class="precio">$89 MXN</p>
+                <a class="boton"
+                   href="https://wa.me/529621054785?text=Hola%2C%20quiero%20pedir%20una%20Hamburguesa%20Especial"
+                   target="_blank" rel="noopener noreferrer">
+                    🛒 Pedir ahora
+                </a>
+            </div>
+
+            <div class="producto">
+                <img
+                    src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=700"
+                    alt="Pizza con queso y pepperoni">
+                <h3>Pizza Familiar</h3>
+                <p>Pizza con queso, salsa de tomate y pepperoni.</p>
+                <p class="precio">$149 MXN</p>
+                <a class="boton"
+                   href="https://wa.me/529621054785?text=Hola%2C%20quiero%20pedir%20una%20Pizza%20Familiar"
+                   target="_blank" rel="noopener noreferrer">
+                    🛒 Pedir ahora
+                </a>
+            </div>
+
+            <div class="producto">
+                <img
+                    src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=700"
+                    alt="Papas fritas crujientes">
+                <h3>Papas Fritas</h3>
+                <p>Papas doradas y crujientes con sal y salsas.</p>
+                <p class="precio">$45 MXN</p>
+                <a class="boton"
+                   href="https://wa.me/529621054785?text=Hola%2C%20quiero%20pedir%20unas%20Papas%20Fritas"
+                   target="_blank" rel="noopener noreferrer">
+                    🛒 Pedir ahora
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <section class="contacto" id="contacto">
+        <h2>📞 Contáctanos</h2>
+        <p>¡Estamos listos para recibir tu pedido!</p>
+        <p>WhatsApp: +52 962 105 4785</p>
+        <a href="https://wa.me/529621054785?text=Hola%2C%20Gustavo%20Burguers"
+           target="_blank" rel="noopener noreferrer">
+            Escríbenos por WhatsApp
+        </a>
+    </section>
+
+    <footer>
+        <p>© 2026 Gustavo Burguers | Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>
